@@ -16,6 +16,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://silaaighar.netlify.app"), // ← your live origin
   title: "Silaaighar - Premium Tailoring Services for Busy Women",
   description:
     "Professional tailoring, stitching, embroidery, and alterations with convenient pickup and delivery. Custom clothing creation, saree work, and repairs for busy working women.",
@@ -23,19 +24,26 @@ export const metadata: Metadata = {
     "tailoring, stitching, embroidery, alterations, custom clothing, saree work, pickup delivery, women tailoring services",
   authors: [{ name: "Silaaighar" }],
   openGraph: {
-    title: "Silaaighar - Premium Tailoring Services",
-    description: "Professional tailoring services with pickup and delivery for busy women",
     type: "website",
+    title: "Silaaighar - Premium Tailoring Services",
+    description:
+      "Professional tailoring services with pickup and delivery for busy women",
     images: [
       {
-        url: "/custom-stitching-studio.png", // public folder path
-        width: 1200, // adjust if you know exact image size
+        url: "/custom-stitching-studio.png", // becomes absolute via metadataBase
+        width: 1200,
         height: 630,
-        alt: "Silaaighar Premium Tailoring Services"
-      }
-    ]
+        alt: "Silaaighar Premium Tailoring Services",
+      },
+    ],
   },
-  generator: 'v0.app'
+  twitter: {
+    card: "summary_large_image",
+    title: "Silaaighar - Premium Tailoring Services",
+    description:
+      "Professional tailoring services with pickup and delivery for busy women",
+    images: ["/custom-stitching-studio.png"],
+  },
 };
 
 
