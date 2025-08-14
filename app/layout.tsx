@@ -17,25 +17,33 @@ const inter = Inter({
 });
 
 const site = "https://silaaighar.netlify.app";
-const og = `${site}/custom-stitching-studio.png`; // make sure this URL returns 200
+const og = `${site}/custom-stitching-studio.png?v=1`; // cache-buster ensures scrapers re-fetch
 
 export const metadata: Metadata = {
   metadataBase: new URL(site),
   title: "Silaaighar - Premium Tailoring Services for Busy Women",
   description:
     "Professional tailoring, stitching, embroidery, and alterations with convenient pickup and delivery.",
-  keywords:
-    [
-      "tailoring",
-      "stitching",
-      "embroidery",
-      "alterations",
-      "custom clothing",
-      "saree work",
-      "pickup delivery",
-      "women tailoring services",
-    ],
+  keywords: [
+    "tailoring",
+    "stitching",
+    "embroidery",
+    "alterations",
+    "custom clothing",
+    "saree work",
+    "pickup delivery",
+    "women tailoring services",
+  ],
   authors: [{ name: "Silaaighar" }],
+  // Make it explicit that bots can index/follow (some scrapers respect this)
+  robots: {
+    index: true,
+    follow: true,
+  },
+  // Help scrapers lock onto your canonical URL
+  alternates: {
+    canonical: site,
+  },
   openGraph: {
     type: "website",
     siteName: "Silaaighar",
@@ -49,6 +57,7 @@ export const metadata: Metadata = {
         secureUrl: og,
         width: 1200,
         height: 630,
+        type: "image/png", // helps some parsers
         alt: "Silaaighar Premium Tailoring Services",
       },
     ],
@@ -60,25 +69,20 @@ export const metadata: Metadata = {
       "Professional tailoring services with pickup and delivery for busy women",
     images: [og],
   },
-  // optional, shows up as a meta tag
   generator: "v0.app",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
         {/* Map Next Font variables to your CSS tokens and set default font */}
         <style>{`
           html {
-            /* wire the google font vars to your own tokens */
             --font-serif: var(--font-playfair);
             --font-sans: var(--font-inter);
-            /* default text font */
             font-family: var(--font-sans);
           }
         `}</style>
