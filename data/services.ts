@@ -6,9 +6,9 @@ export const services = [
     bullets: ["Body measurements", "Style consultation", "Premium finishing"],
     price: "₹799",
     eta: "3–5 days",
-    image: "/tailor-measuring-fabric.png",
+    image: "/custom-stitching-studio.png",
     icon: "🎯",
-    alt: "Tailor measuring fabric on a table",
+    alt: "Vintage sewing machine with golden traditional outfit and Silaaighar custom stitching setup",
   },
   {
     slug: "embroidery",
@@ -28,9 +28,9 @@ export const services = [
     bullets: ["Length & taper", "Waist adjustments", "Sleeve fixes"],
     price: "₹249",
     eta: "24–48 hrs",
-    image: "/placeholder-pzpoa.png",
+    image: "/saree-alterations-studio.png",
     icon: "🪡",
-    alt: "Tailor pinning trouser hem",
+    alt: "Antique sewing machine with golden embroidered fabric and Silaaighar saree alterations setup",
   },
   {
     slug: "repairs",
