@@ -15,22 +15,29 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
+const site = "https://silaaighar.netlify.app";
+const og = `${site}/custom-stitching-studio.png`; // ensure this URL 200s
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://silaaighar.netlify.app"), // ← your live origin
+  metadataBase: new URL(site),
   title: "Silaaighar - Premium Tailoring Services for Busy Women",
   description:
-    "Professional tailoring, stitching, embroidery, and alterations with convenient pickup and delivery. Custom clothing creation, saree work, and repairs for busy working women.",
-  keywords:
-    "tailoring, stitching, embroidery, alterations, custom clothing, saree work, pickup delivery, women tailoring services",
-  authors: [{ name: "Silaaighar" }],
+    "Professional tailoring, stitching, embroidery, and alterations with convenient pickup and delivery.",
   openGraph: {
     type: "website",
+    siteName: "Silaaighar",
+    url: site,
     title: "Silaaighar - Premium Tailoring Services",
     description:
       "Professional tailoring services with pickup and delivery for busy women",
     images: [
-      // use absolute URL to be super safe with WhatsApp/Facebook scrapers
-      "https://silaaighar.netlify.app/custom-stitching-studio.png",
+      {
+        url: og,
+        secureUrl: og,
+        width: 1200,
+        height: 630,
+        alt: "Silaaighar Premium Tailoring Services",
+      },
     ],
   },
   twitter: {
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
     title: "Silaaighar - Premium Tailoring Services",
     description:
       "Professional tailoring services with pickup and delivery for busy women",
-    images: ["https://silaaighar.netlify.app/custom-stitching-studio.png"],
+    images: [og],
   },
 };
 
