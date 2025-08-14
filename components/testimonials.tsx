@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Star, ChevronLeft, ChevronRight } from "lucide-react"
+import { Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -18,7 +18,6 @@ interface Testimonial {
 
 export function Testimonials() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([])
-  const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
     // Load testimonials data
@@ -34,20 +33,6 @@ export function Testimonials() {
     loadTestimonials()
   }, [])
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
-
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <Star key={i} className={`w-4 h-4 ${i < rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`} />
-    ))
-  }
-
   const scrollToEnquiry = () => {
     const enquirySection = document.getElementById("enquiry-form")
     if (enquirySection) {
@@ -60,7 +45,7 @@ export function Testimonials() {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-b from-rose-50 to-white">
+    <section className="py-16 bg-gradient-to-b from-rose-50 to-white overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-serif text-gray-800 mb-4">What Our Clients Say</h2>
@@ -70,62 +55,20 @@ export function Testimonials() {
           </p>
         </div>
 
-        {/* Desktop Grid (3 per row) */}
-        <div className="hidden lg:grid lg:grid-cols-3 gap-6 mb-8">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
-          ))}
-        </div>
-
-        {/* Mobile Carousel */}
-        <div className="lg:hidden relative mb-8">
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-300 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
-                  <TestimonialCard testimonial={testimonial} />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Carousel Controls */}
-          <div className="flex justify-center items-center gap-4 mt-6">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prevSlide}
-              className="rounded-full bg-transparent"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </Button>
-
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? "bg-rose-500" : "bg-gray-300"
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={nextSlide}
-              className="rounded-full bg-transparent"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </Button>
+        <div className="relative mb-8">
+          <div className="flex animate-scroll gap-6">
+            {/* First set of testimonials */}
+            {testimonials.map((testimonial, index) => (
+              <div key={`first-${index}`} className="flex-shrink-0 w-80">
+                <TestimonialCard testimonial={testimonial} />
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {testimonials.map((testimonial, index) => (
+              <div key={`second-${index}`} className="flex-shrink-0 w-80">
+                <TestimonialCard testimonial={testimonial} />
+              </div>
+            ))}
           </div>
         </div>
 
