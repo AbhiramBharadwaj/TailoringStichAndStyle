@@ -90,8 +90,8 @@ export function Hero() {
 
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/hero-elegant-tailoring-studio.png"
-                alt="Elegant tailoring studio with beautiful Indian fabrics, intricate embroidery work, vintage sewing machine, and warm ambient lighting"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Aug%2014%2C%202025%2C%2001_15_08%20PM-RtpFS0DvTeZ4lWi2RSTbsNddA5y67K.png"
+                alt="Vintage miniature sewing machine on stacked books with warm lighting - Silaaighar Tailoring craftsmanship"
                 width={600}
                 height={500}
                 className="w-full h-auto object-cover"
