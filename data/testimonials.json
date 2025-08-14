@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Priya R.",
+    "city": "Kukatpally",
+    "service": "Alteration",
+    "rating": 5,
+    "quote": "Picked up my trousers at 8 pm and delivered next day perfectly tapered. Total lifesaver!",
+    "photo": "/placeholder.svg?height=80&width=80"
+  },
+  {
+    "name": "Anitha S.",
+    "city": "HSR Layout",
+    "service": "Stitching",
+    "rating": 5,
+    "quote": "Blouse fit was spot on from the first try. Loved the neat finishing.",
+    "photo": "/placeholder.svg?height=80&width=80"
+  },
+  {
+    "name": "Fatima Z.",
+    "city": "T Nagar",
+    "service": "Embroidery",
+    "rating": 4,
+    "quote": "Delicate floral work done exactly like my reference picture.",
+    "photo": "/placeholder.svg?height=80&width=80"
+  },
+  {
+    "name": "Meera K.",
+    "city": "Kothrud",
+    "service": "Saree Fall & Edging",
+    "rating": 5,
+    "quote": "Same-day pickup and quick edging—ready for the event!",
+    "photo": "/placeholder.svg?height=80&width=80"
+  },
+  {
+    "name": "Neha D.",
+    "city": "Madhapur",
+    "service": "Repair & Patching",
+    "rating": 5,
+    "quote": "Saved my favorite kurti with a clean patch—hardly visible.",
+    "photo": "/placeholder.svg?height=80&width=80"
+  },
+  {
+    "name": "Anjali G.",
+    "city": "Andheri West",
+    "service": "Alteration",
+    "rating": 4,
+    "quote": "Waist and length adjustments were perfect, fair pricing too.",
+    "photo": "/placeholder.svg?height=80&width=80"
+  }
+]
