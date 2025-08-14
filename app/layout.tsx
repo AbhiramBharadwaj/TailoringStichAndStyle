@@ -16,19 +16,28 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Stitch & Style - Premium Tailoring Services for Busy Women",
+  title: "Silaaighar - Premium Tailoring Services for Busy Women",
   description:
     "Professional tailoring, stitching, embroidery, and alterations with convenient pickup and delivery. Custom clothing creation, saree work, and repairs for busy working women.",
   keywords:
     "tailoring, stitching, embroidery, alterations, custom clothing, saree work, pickup delivery, women tailoring services",
-  authors: [{ name: "Stitch & Style" }],
+  authors: [{ name: "Silaaighar" }],
   openGraph: {
-    title: "Stitch & Style - Premium Tailoring Services",
+    title: "Silaaighar - Premium Tailoring Services",
     description: "Professional tailoring services with pickup and delivery for busy women",
     type: "website",
+    images: [
+      {
+        url: "/custom-stitching-studio.png", // public folder path
+        width: 1200, // adjust if you know exact image size
+        height: 630,
+        alt: "Silaaighar Premium Tailoring Services"
+      }
+    ]
   },
-    generator: 'v0.app'
-}
+  generator: 'v0.app'
+};
+
 
 export default function RootLayout({
   children,

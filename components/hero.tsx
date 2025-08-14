@@ -30,7 +30,7 @@ export function Hero() {
           <div className="space-y-8">
             <div className="inline-flex items-center space-x-2 bg-rose-50 text-rose-600 px-4 py-2 rounded-full text-sm font-medium">
               <Star className="h-4 w-4 fill-current" />
-              <span>Premium Tailoring Services</span>
+              <span>Silaaighar Tailoring Services</span>
             </div>
 
             <div className="space-y-4">
