@@ -29,12 +29,8 @@ export const metadata: Metadata = {
     description:
       "Professional tailoring services with pickup and delivery for busy women",
     images: [
-      {
-        url: "/custom-stitching-studio.png", // becomes absolute via metadataBase
-        width: 1200,
-        height: 630,
-        alt: "Silaaighar Premium Tailoring Services",
-      },
+      // use absolute URL to be super safe with WhatsApp/Facebook scrapers
+      "https://silaaighar.netlify.app/custom-stitching-studio.png",
     ],
   },
   twitter: {
@@ -42,7 +38,7 @@ export const metadata: Metadata = {
     title: "Silaaighar - Premium Tailoring Services",
     description:
       "Professional tailoring services with pickup and delivery for busy women",
-    images: ["/custom-stitching-studio.png"],
+    images: ["https://silaaighar.netlify.app/custom-stitching-studio.png"],
   },
 };
 
