@@ -18,7 +18,8 @@ Perfect stitches for busy women with a **service showcase** and quick call-to-ac
 ### Service Booking
 An integrated booking form that allows clients to schedule tailoring services, pickups, and deliveries with ease.
 
-<img width="1512" height="892" alt="image" src="https://github.com/user-attachments/assets/8da05890-1af3-4e2d-b3d7-0e1d911f51ee" />
+<img width="1512" height="892" alt="image" src="https://github.com/user-attachments/assets/9b4cdbdc-5fb4-437a-958b-67e4c3373a35" />
+
 
 ---
 
