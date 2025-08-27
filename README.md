@@ -12,12 +12,13 @@ The platform highlights **pickup & delivery, quick turnaround, and professional 
 ### Landing Page
 Perfect stitches for busy women with a **service showcase** and quick call-to-actions.
 
-![Uploading image.png…]()
+<img width="1425" height="889" alt="Screenshot 2025-08-27 at 14 54 11" src="https://github.com/user-attachments/assets/d520a5a0-d3e3-4910-b5c6-98ba112a2e0d" />
+
 
 ### Service Booking
 An integrated booking form that allows clients to schedule tailoring services, pickups, and deliveries with ease.
 
-![Uploading image.png…]()
+<img width="1512" height="892" alt="image" src="https://github.com/user-attachments/assets/8da05890-1af3-4e2d-b3d7-0e1d911f51ee" />
 
 ---
 
